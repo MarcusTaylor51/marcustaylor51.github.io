@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chatbot Test Page</title>
+</head>
+<body>
+  <h1>Salesforce Messaging for Web — Test Page</h1>
+  <p>The chat widget should appear in the corner of this page.</p>
+
+  <!-- Salesforce Embedded Messaging snippet -->
+  <script type='text/javascript'>
+    function initEmbeddedMessaging() {
+      try {
+        embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+        embeddedservice_bootstrap.init(
+          '00DO400000Pw4o1',
+          'Enhanced_Sven_Deployment',
+          'https://sevencorners--fullcopy.sandbox.my.site.com/ESWEnhancedSvenDeployme1770847303723',
+          {
+            scrt2URL: 'https://sevencorners--fullcopy.sandbox.my.salesforce-scrt.com'
+          }
+        );
+      } catch (err) {
+        console.error('Error loading Embedded Messaging: ', err);
+      }
+    };
+  </script>
+  <script type='text/javascript' src='https://sevencorners--fullcopy.sandbox.my.site.com/ESWEnhancedSvenDeployme1770847303723/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+</body>
+</html>
